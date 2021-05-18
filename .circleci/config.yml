@@ -2,19 +2,15 @@ version: 2.1
 
 jobs:
   test:
-    override:
-      - bundle exec rake
-  machine:
-    ruby:
-      version: 2.2.4
-
-  # Enable xcode below if you need macOS
-  #   xcode:
-  #     version: "7.3"
+    docker:
+        - image: cimg/ruby:2.2.4
+    steps:
+      - run: 
+          name: execute rake
+          command: bundle exec rake
 
 workflows:
   version: 2
   bundle:
     jobs:
       - test
-      - machine
