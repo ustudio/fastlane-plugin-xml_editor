@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-        - image: cimg/ruby:2.2
+        - image: cimg/ruby:2.5.9
     steps:
       - run: 
           name: execute rake
