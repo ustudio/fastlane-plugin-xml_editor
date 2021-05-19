@@ -1,0 +1,18 @@
+version: 2.1
+
+jobs:
+  test:
+    working_directory: ~/fastlane-plugin-xml_editor
+    docker:
+        - image: cimg/ruby:2.5.9
+    steps:
+      - checkout # pull down our git code.
+      - run:
+          name: Install dependencies
+          command: bundle install
+
+workflows:
+  version: 2
+  bundle:
+    jobs:
+      - test
