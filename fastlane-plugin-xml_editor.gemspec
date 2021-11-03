@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   # Don't add a dependency to fastlane or fastlane_re
   # since this would cause a circular dependency
 
-  spec.add_dependency 'plist', '~> 3.3.0'
+  spec.add_dependency 'plist', '~> 3.3'
   spec.add_dependency 'nokogiri', '~> 1.12'
 
   spec.add_development_dependency 'pry'
